@@ -6,6 +6,10 @@
 //alert("event_test.js 파일 연결 성공...");
 
 window.onload = function(){
+	//알림창 자동 출력 처리
+	window.open("../view/gongji.html", "gongji", 
+			"width=400, height=300, menubar=no, toolbar=no, status=no, location=no, resizable=no, titlebar=no");
+	
 	//id가 btn인 태그 엘리먼트가 클릭되었을 때의 동작처리
 	var btn = document.getElementById("btn");
 	btn.onclick = function(e){
