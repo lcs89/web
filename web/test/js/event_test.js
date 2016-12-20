@@ -15,20 +15,30 @@ window.onload = function(){
 		console.log(e.target.offsetLeft);
 		console.log(e.target.offsetTop);
 	}
-	//nation의 선택값이 변경되었을 때, 선택된 nation의 값을 읽어서
-	//그 값에 대한 li 항목의 배경색과 글자색을 변경처리 함
 	
+	//nation 의 선택값이 변경되었을 때, 선택된 nation 의 값을 읽어서
+	//그 값에 대한 li 항목의 배경색과 글자색을 변경처리함
 	var li = document.getElementsByTagName("li");
 	var nation = document.getElementById("nation");
-
+	
 	nation.onchange = function() {
+		changeList();
 		var index = this.value;
-		console.log(index);
-		console.log(li[index]);
-		li[index].style.backgroundColor="yellow";
-		li[index].color="red";
-		
-		
-	alert(this.value)
+		li[index].style.backgroundColor = "yellow";
+		li[index].style.color = "red";
 	}
 }
+
+function changeList(){
+	var li = document.getElementsByTagName("li");
+	
+	for(var i = 0; i < li.length; i++){
+		li[i].style.backgroundColor = "white";
+		li[i].style.color = "black";
+	}
+}
+
+
+
+
+
